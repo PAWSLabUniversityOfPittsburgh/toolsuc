@@ -37,6 +37,7 @@ public class RedirectController{
 //			case "ga": return "redirect:/redirect/admin/groupAuthoring";
 //			default: return "redirect:/";
 //		}
+		
 	}
 	
 	//redirect handler specialized for groupAuthoring tool
@@ -65,5 +66,5 @@ public class RedirectController{
 //			case "mg": return "redirect:"+host+"/mastergrid";
 //			default: return "redirect:/";
 //		}
-	}
+		}
 }

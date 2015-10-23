@@ -2,6 +2,7 @@ package com.pawslab.toolsuc;
 
 import java.util.HashMap;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -13,9 +14,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.pawslab.toolsuc.service.UserRegister;
+
  
 @Controller
 public class MainController{
+	
+	@Autowired
+	private UserRegister ur;
 	
 	//for the main portal page
 	@RequestMapping(value = { "/", "/home" }, method = RequestMethod.GET)
@@ -23,8 +29,7 @@ public class MainController{
 		ModelAndView model = new ModelAndView();
 		UserDetails userDetails = (UserDetails)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		int hash = userDetails.hashCode();
-		model.addObject("title", "Spring Security Login Form - Database Authentication");
-		model.addObject("message", "This is default page!");
+		ur.aggUserComplete(userDetails.getUsername());
 		model.addObject("hashVal", hash);
 		model.setViewName("home");
 		return model;

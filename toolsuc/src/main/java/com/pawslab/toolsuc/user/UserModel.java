@@ -8,6 +8,7 @@ public class UserModel{
 	private String fName;
 	private String lName;
 	private String fullName;
+	private String name;
 	private int isGroup;
 	private int sync;
 	private String email;
@@ -18,6 +19,14 @@ public class UserModel{
 	private String how;
 	private int isInstructor;
 	private int isAnyGroup;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 
 	public int getIsAnyGroup() {
 		return isAnyGroup;

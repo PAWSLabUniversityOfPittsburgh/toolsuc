@@ -7,21 +7,21 @@
 	<bean id="portal2" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://localhost:3306/portal_test2" />
-		<property name="" value="" />
-		<property name="" value="" />
+		<property name="username" value="" />
+		<property name="password" value="" />
 	</bean>
 	
 	<bean id="um2" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://localhost:3306/um2" />
-		<property name="" value="" />
-		<property name="" value="" />
+		<property name="username" value="" />
+		<property name="password" value="" />
 	</bean>
 	
 	<bean id="aggregate" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://localhost:3306/aggregate" />
-		<property name="" value="" />
-		<property name="" value="" />
+		<property name="username" value="" />
+		<property name="password" value="" />
 	</bean>
 </beans>

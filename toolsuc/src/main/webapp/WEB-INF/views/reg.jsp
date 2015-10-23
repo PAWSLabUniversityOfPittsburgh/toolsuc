@@ -129,7 +129,15 @@
 	            xhr.setRequestHeader("${_csrf.headerName}", "${_csrf.token}");
 	        },
 	        success: function(data) {
-	            console.log(data);       
+	        	var code = data.code;
+	        	if(code === '0'){
+	        		alert('Register completed!');
+	        		location = "${baseURL}";
+	        	}else if(code === '1'){
+	        		alert('Username is already taken. Please try another one.');
+	        	}else if(code === '2'){
+	        		alert('Database error occurred. Please contact the administator.')
+	        	}
 	        },
 	        error : function(jqXHR, textStatus, errorThrown) {
 	            alert(jqXHR.status + " " + jqXHR.responseText);

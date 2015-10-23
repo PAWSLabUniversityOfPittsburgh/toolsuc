@@ -47,6 +47,19 @@ public class UserRegister {
 		return rs;
 	}
 	
+	public void aggUserComplete(String username){
+		//check if agg database has this user
+		if(!aggdao.isExist(username)){
+			//no then fill it in
+			UserModel curr = p2dao.findByUsername(username);
+			String[] names = curr.getName().split(", ");
+			curr.setAffiliation_code("NULL");
+			curr.setfName(names[0]);
+			curr.setlName(names[1]);
+			aggdao.insert(curr);
+		}
+	}
+	
 	private boolean checkUserP2(String username){
 		return p2dao.isExist(username);
 	}
