@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
-	
+	<!--   -->
 	<!-- User Data Access Part -->
 	<bean id="UserP2DAO" class="com.pawslab.toolsuc.user.UserP2DAO">
 		<property name="dataSource" ref="portal2" />

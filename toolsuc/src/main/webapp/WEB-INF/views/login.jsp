@@ -40,7 +40,7 @@
 				<input id="pwd" type="password" class="form-control" name='password'/>
 			</div>
 			<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-			<button id="loginb" type="button" class="btn btn-default">Submit</button>
+			<button id="loginb" type="submit" class="btn btn-default">Submit</button>
 		</form>
 	</div>
 	<div class="rCol">

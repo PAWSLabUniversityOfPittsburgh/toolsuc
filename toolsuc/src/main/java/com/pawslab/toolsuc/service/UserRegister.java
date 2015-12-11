@@ -55,7 +55,10 @@ public class UserRegister {
 			String[] names = curr.getName().split(", ");
 			curr.setAffiliation_code("NULL");
 			curr.setfName(names[0]);
-			curr.setlName(names[1]);
+			if(names.length > 1)
+				curr.setlName(names[1]);
+			else
+				curr.setlName(names[0]);
 			aggdao.insert(curr);
 		}
 	}
