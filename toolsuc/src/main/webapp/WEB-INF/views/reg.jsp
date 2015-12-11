@@ -29,17 +29,17 @@
 		<label>Full Name</label>
 		<div class="form-group">
 			<div class="form-group col-md-6">
-		    	<input name="fName" id="fname" pattern="^([A-z]){1,}$" maxlength="30" type="text" class="form-control" placeholder="first name" required>
+		    	<input name="fName" id="fname" pattern="^([A-z.]){1,}$" maxlength="30" type="text" class="form-control" placeholder="first name" required>
 		    	<div class="help-block with-errors">Up to 30 letters</div>
 			</div>
 			<div class="form-group col-md-6">
-		    	<input name="lName" id="lname" pattern="^([A-z]){1,}$" maxlength="30" type="text" class="form-control" placeholder="last name" required>
+		    	<input name="lName" id="lname" pattern="^([A-z.]){1,}$" maxlength="30" type="text" class="form-control" placeholder="last name" required>
 		    	<div class="help-block with-errors">Up to 30 letters</div>
 			</div>
 		</div>
 		<div class="form-group">
 	    	<label for="username" class="control-label">Username</label>
-	    	<input name="login" id="username" pattern="^([_A-z0-9]){3,}$" maxlength="30" type="text" class="form-control" placeholder="your preferred username" required>
+	    	<input name="login" id="username" pattern="^([_A-z0-9.]){3,}$" maxlength="30" type="text" class="form-control" placeholder="your preferred username" required>
 	    	<div class="help-block with-errors">No less than 3, Up to 30 letters, numbers and underscores.</div>
 		</div>
 		<div class="form-group">
